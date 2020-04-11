@@ -8,10 +8,10 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+          <h2>NZ Covid19 Wage Subsidy Quizz</h2>
         </div>
         <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
+          Check to see if you are eligible to the Covid19 Wage Subsidy from the New Zealand Government!
         </p>
       </div>
     );
