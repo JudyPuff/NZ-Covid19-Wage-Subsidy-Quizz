@@ -15,6 +15,9 @@ class Home extends React.Component {
           <p>
           Check to see if you are eligible for the Covid19 Wage Subsidy from the New Zealand Government!
           </p>
+          <div>
+            <Link to='/question'><button>Start Quizz</button></Link>
+          </div>
         </div>
     )
   }
