@@ -22,3 +22,68 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+body {
+  margin:0;
+  font-family: 'Merriweather', serif;
+}
+
+h1 {
+  font-family: 'Merriweather', serif;
+  font-size: 2em;
+
+}
+
+p {
+  font-size: 0.8em;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; 
+  background:url('../public/hand-heart-background.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.titleContainer {
+  text-align: center;
+  color: white;
+  font-size: 3em;
+}
+
+.resultContainer{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.middleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white !important;
+  font-size: 2em;
+  
+}
+
+.content {
+  background-color: rgba(1, 32, 30, 0.7);
+  width: 60%;
+  padding: 2% 2%;
+}
+
+.buttonContainer { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.startButton {
+ margin: 0% 5%;
+ padding: 1% 4%;
+ font-size: 0.8em;
+ 
+}

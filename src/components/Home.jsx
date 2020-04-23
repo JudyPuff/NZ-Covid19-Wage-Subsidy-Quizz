@@ -1,6 +1,6 @@
 import React from 'react'
-import {Route, Link} from 'react-router-dom'
-// import Question from './Question'
+import {Link} from 'react-router-dom'
+import Question from './Question'
 
 class Home extends React.Component {
   constructor (props){
@@ -11,14 +11,17 @@ class Home extends React.Component {
   }
   render () {
     return (
-      <div className="App-intro">
+      <div className="middleContainer">
+        <div className="content">
           <p>
           Check to see if you are eligible for the Covid19 Wage Subsidy from the New Zealand Government!
           </p>
           <div>
-            <Link to='/question'><button>Start Quizz</button></Link>
+            <Link to='/question' Component={<Question/>}><button>Start Quizz</button></Link>
           </div>
+
         </div>
+      </div>
     )
   }
 }
