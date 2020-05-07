@@ -1,31 +1,47 @@
-import React from 'react'
-import Question from './components/Question'
-import AnswerYN from './components/AnswerYN'
+import React from 'react';
+// import {quizQuestions} from '../api/quizQuestions'
+import Questions from './Questions'
+// import currentQ from './CurrentQ'
 
-function Quiz(props) {
-
-  function renderAnswerYN(key) {
-    return (
-      <AnswerYN
-        key={key.content}
-        answerContent={key.content}
-        answerType={key.type}
-        answer={props.answer}
-        questionId={props.questionId}
-        onAnswerSelected={props.onAnswerSelected}
-      />
-    )
+class Quiz extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      question:''
+      
+    }
+    this.qHandler = this.qHandler.bind(this)
+    this.handleChange = this.handleChange.bind(this)
+  }
+  
+  qHandler(newQ){
+    this.setState({
+      q:newQ
+    })
   }
 
-  return (
-    <div className="quiz">
-      <Question content={props.question}/>
-      <div className="answerYN">
-        {props.answerYN.map(renderAnswerYN)}
-      </div>
+  handleChange (evt) {
+    this.setState({
+      [evt.target.name]: evt.target.value
+    })
+  }
+
+  componentDidMount(){
+    this.setState({
+      question:this.question
+    })
+  }
+
+render() {
+  return(
+  <div className="container">
+    <div className="middleContainer">
+      <Questions changeQ={this.qHandler}/>
 
     </div>
-  )
+  </div>
+
+  )}
 }
 
 export default Quiz

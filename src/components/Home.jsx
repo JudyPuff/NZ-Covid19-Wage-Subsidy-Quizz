@@ -1,14 +1,8 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import Question from './Question'
+import Quiz from './Quiz'
 
 class Home extends React.Component {
-  constructor (props){
-    super(props)
-    this.state={
-
-    }
-  }
   render () {
     return (
       <div className="middleContainer">
@@ -17,7 +11,7 @@ class Home extends React.Component {
           Check to see if you are eligible for the Covid19 Wage Subsidy from the New Zealand Government!
           </p>
           <div>
-            <Link to='/question' Component={<Question/>}><button>Start Quizz</button></Link>
+            <Link to='/quiz' Component={<Quiz/>}><button>Start Quiz</button></Link>
           </div>
 
         </div>

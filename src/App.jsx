@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 // import Questions from './components/Questions'
 import Home from './components/Home';
-import Question from './components/Question'
+import Quiz from './components/Quiz'
 import { HashRouter as Router, Route } from 'react-router-dom'
 
 
@@ -21,8 +21,8 @@ class App extends Component {
         <div className="container">
           <div className="middleContainer">
           <Route exact path='/' component={Home}/>
-          <Route path='/question' render={() => {
-              return (<Question/>)
+          <Route path='/quiz' render={() => {
+              return (<Quiz/>)
             }} />
           </div>
         </div>
