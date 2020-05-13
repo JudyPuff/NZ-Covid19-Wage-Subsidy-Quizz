@@ -1,3 +1,5 @@
+import resultMsgs from './resultMsgs'
+
 const quizQuestions = [
   {
     id: 1,
@@ -6,10 +8,12 @@ const quizQuestions = [
       {
         type: true,
         content: "Yes",
+        nextQuestion: 1
       },
       {
         type: false,
-        content: "No"
+        content: "No",
+        nextQuestion: 2
       }
     ]
   },
@@ -20,10 +24,12 @@ const quizQuestions = [
       {
         type: true,
         content: "Yes",
+        nextQuestion: 3
       },
       {
         type: false,
-        content: "No"
+        content: "No",
+        nextQuestion: 2
       }
     ]
   },
@@ -34,24 +40,28 @@ const quizQuestions = [
       {
         type: true,
         content: "Yes",
+        nextQuestion: 3
       },
       {
         type: false,
-        content: "No"
+        content: "No",
+        nextQuestion: 4
       }
     ]
   },
   {
     id: 4,
-    question: "Are you being asked to wor your normal hours, at normal pay?",
+    question: "Are you being asked to work your normal hours, at normal pay?",
     answers: [ 
       {
         type: true,
         content: "Yes",
+        nextQuestion: props.resultMsgs.msgWFH
       },
       {
         type: false,
-        content: "No"
+        content: "No",
+        nextQuestion: resultMsgs.msgCondChange
       }
     ]
   },
@@ -62,10 +72,12 @@ const quizQuestions = [
       {
         type: true,
         content: "Yes",
+        nextQuestion: resultMsgs.govtAnnouncement
       },
       {
         type: false,
-        content: "No"
+        content: "No",
+        nextQuestion: resultMsgs.msgCondChange
       }
     ]
   },
@@ -76,10 +88,12 @@ const quizQuestions = [
       {
         type: true,
         content: "Yes",
+        nextQuestion: 6
       },
       {
         type: false,
-        content: "No"
+        content: "No",
+        nextQuestion: resultMsgs.msgEmployerNotEligible
       }
     ]
   },
@@ -90,10 +104,12 @@ const quizQuestions = [
       {
         type: true,
         content: "Yes",
+        nextQuestion: 7
       },
       {
         type: false,
-        content: "No"
+        content: "No",
+        nextQuestion: resultMsgs.msgAskEmployer
       }
     ]
   },
@@ -104,10 +120,12 @@ const quizQuestions = [
       {
         type: true,
         content: "Yes",
+        nextQuestion: 8
       },
       {
         type: false,
-        content: "No"
+        content: "No",
+        nextQuestion: resultMsgs.msgRedundant
       }
     ]
   },
@@ -118,10 +136,12 @@ const quizQuestions = [
       {
         type: true,
         content: "Yes",
+        nextQuestion: resultMsgs.msgGood
       },
       {
         type: false,
-        content: "No"
+        content: "No",
+        nextQuestion: resultMsgs.msgEmployerSubsidy
       }
     ]
   },

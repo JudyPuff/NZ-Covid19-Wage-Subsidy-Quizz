@@ -19,10 +19,24 @@ class Questions extends React.Component {
   }
 
   render() {
+    const currentQuestion = quizQuestions[this.state.questionId]
+    const yesButton = quizQuestions[this.state.questionId].answers[0]
+    const noButton = quizQuestions[this.state.questionId].answers[1]
+    const handleClickYes = () => {
+      this.setState({
+        questionId: yesButton.nextQuestion
+      })
+    }
+    const handleClickNo = () => {
+      this.setState({
+        questionId: noButton.nextQuestion
+      })
+    }
     return (
       <div>
-        <div>Question: {quizQuestions[this.state.questionId].question}</div>
-        <button onClick={this.nextQHandler}>Next Question</button>
+        <div>{quizQuestions[this.state.questionId].question}</div>
+        <button onClick={this.handleClickYes}>Yes{yesButton.content}</button>
+        <button onClick={this.handleClickNo}>No{noButton.content}</button>
       </div>
     )
   }
