@@ -35,8 +35,8 @@ class Questions extends React.Component {
     return (
       <div>
         <div>{quizQuestions[this.state.questionId].question}</div>
-        <button onClick={this.handleClickYes}>Yes{yesButton.content}</button>
-        <button onClick={this.handleClickNo}>No{noButton.content}</button>
+        <button className="buttonContainer" onClick={this.handleClickYes}>Yes{yesButton.content}</button>
+        <button className="buttonContainer" onClick={this.handleClickNo}>No{noButton.content}</button>
       </div>
     )
   }
